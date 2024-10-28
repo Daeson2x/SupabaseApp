@@ -21,6 +21,7 @@ export default class Login extends Component {
           Alert.alert("El correo o la contrasseña no coincide")
         }else {
           Alert.alert("Inicio de sesion correcto" ,'Bienvenido ',);
+          this.props.navigation.navigate('Dashboard')
           
         }
       }
@@ -29,11 +30,11 @@ export default class Login extends Component {
       <View style={styles.container}>
         <ImageBackground source={require('./images/fondo.jpg')} style={styles.backgroundImage}>
           <View style={styles.header}>
-            <Text style={styles.title}>Login</Text>
+            <Text style={styles.title}>Bienvenido! </Text>
           </View>
 
           <TextInput
-            placeholder='Código'
+            placeholder='Correo'
             style={styles.input}
             placeholderTextColor="gray"
             value={this.state.correo}
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     height: 50,
     width: '80%',
-    backgroundColor: '#ffaf7a',
+    backgroundColor: '#080019',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 20,
@@ -101,6 +102,6 @@ const styles = StyleSheet.create({
   buttonText: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: 'black',
+    color: 'white',
   },
 });
